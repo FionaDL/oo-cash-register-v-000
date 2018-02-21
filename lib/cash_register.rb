@@ -22,7 +22,6 @@ class CashRegister
       discount_total = discount/100 * @total
       discount_total1 = @total - discount_total
       "After the discount, the total comes to $#{discount_total1}."
-    end
   end
 
 
