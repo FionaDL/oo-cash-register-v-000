@@ -20,8 +20,9 @@ class CashRegister
       discount_total = discount/100 * @total
       discount_total1 = @total - discount_total
       "After the discount, the total comes to $#{discount_total1}."
-    else 
+    else
       "There is no discount to apply."
+    end
   end
 
 
