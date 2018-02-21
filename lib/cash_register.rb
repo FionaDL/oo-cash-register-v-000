@@ -23,7 +23,7 @@ class CashRegister
       discount_total1 = @total - discount_total
       discount_total2 = discount_total1.to_i
       "After the discount, the total comes to $#{discount_total1}."
-      @total = discount_total1
+      @total = discount_total2
     else
       "There is no discount to apply."
     end
