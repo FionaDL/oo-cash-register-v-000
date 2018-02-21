@@ -12,14 +12,16 @@ class CashRegister
 
   def add_item (title, price, quantity=1)
     self.total += price * quantity
-     @items << title
+    quantity.times do 
+     @items << title 
+   end
   end
 
 
 
   def apply_discount
     if @discount != 0
-      discount_total = discount/100.0 * @total
+      discount_total = (discount/100.0 * @total) 
       discount_total1 = @total - discount_total
       discount_total2 = discount_total1.to_i
       @total = discount_total2
