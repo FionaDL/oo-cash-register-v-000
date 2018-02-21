@@ -9,12 +9,12 @@ class CashRegister
   def initialize (discount = 0)
     @total = 0
     @discount = discount
-    
+
   end
 
   def add_item (title, price, quantity=1)
     self.total =+ price * quantity
-    
+
   end
 
   def apply_discount
@@ -22,7 +22,6 @@ class CashRegister
       discount_total = discount/100.0 * @total
       discount_total1 = @total - discount_total
       "After the discount, the total comes to $#{discount_total1}."
-      binding.pry
     else
       "There is no discount to apply."
     end
