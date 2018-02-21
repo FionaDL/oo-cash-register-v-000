@@ -1,20 +1,16 @@
 require 'pry'
 
 class CashRegister
-  #each .new is a transaction
-  #each transaction begins with a total of 0, a possible discount, an ability to call the last transaction, and an empty array of items
-
+  
   attr_accessor :total, :discount
 
   def initialize (discount = 0)
     @total = 0
     @discount = discount
-
   end
 
   def add_item (title, price, quantity=1)
-     self.total =+ price * quantity
-  
+     @total =self.total =+ price * quantity
   end
 
   def apply_discount
