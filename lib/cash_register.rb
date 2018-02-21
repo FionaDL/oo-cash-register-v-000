@@ -15,6 +15,7 @@ class CashRegister
     quantity.times do
      @items << title
    end
+   last_transaction = 
   end
 
 
@@ -29,6 +30,9 @@ class CashRegister
     else
       "There is no discount to apply."
     end
+
+  def void_last_transaction
+    self.total = self.total - self.last_transaction
 
   end
 
